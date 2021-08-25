@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/shmileee/github-to-terraform/pkg/repository"
 	"github.com/google/go-github/github"
+	"github.com/shmileee/github-to-terraform/pkg/repository"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
