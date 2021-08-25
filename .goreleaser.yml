@@ -1,0 +1,47 @@
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    - go mod download
+builds:
+- env:
+    - CGO_ENABLED=0
+  goos:
+    - darwin
+    - linux
+  goarch:
+    - amd64
+  main: main.go
+brews:
+  - description: "Get current GitHub configuration and create Terraform code for it"
+    tap:
+      owner: shmileee
+      name: homebrew-tap
+    homepage: "https://github.com/shmileee/github-to-terraform"
+    commit_author:
+      name: shmileee
+      email: ponomarov.aleksandr@gmail.com
+dockers:
+  -
+    ids:
+      - github-to-terraform
+    image_templates:
+      - "shmileee/github-to-terraform:{{ .Tag }}"
+    skip_push: true
+archives:
+  -
+    replacements:
+      darwin: Darwin
+      linux: Linux
+      amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+  algorithm: sha256
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
