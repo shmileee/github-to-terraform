@@ -11,6 +11,7 @@ builds:
     - linux
   goarch:
     - amd64
+    - arm64
   main: main.go
 brews:
   - description: "Get current GitHub configuration and create Terraform code for it"
@@ -29,11 +30,11 @@ dockers:
       - "shmileee/github-to-terraform:{{ .Tag }}"
     skip_push: true
 archives:
-  -
-    replacements:
-      darwin: Darwin
+  - replacements:
+      darwin: MacOS
       linux: Linux
       amd64: x86_64
+      arm64: arm64
 checksum:
   name_template: 'checksums.txt'
   algorithm: sha256
