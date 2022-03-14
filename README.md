@@ -1,4 +1,6 @@
 # github-to-terraform
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fshmileee%2Fgithub-to-terraform.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fshmileee%2Fgithub-to-terraform?ref=badge_shield)
+
 
 ## Description
 
@@ -58,3 +60,7 @@ Extract collaborators from single public repository like this:
 ```sh
 github-to-terraform collaborators --repo-type public --repo-name <repository>
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fshmileee%2Fgithub-to-terraform.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fshmileee%2Fgithub-to-terraform?ref=badge_large)
